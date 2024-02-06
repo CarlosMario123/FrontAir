@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homae</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="./home.css" />
+  </head>
+  <body>
+    <nav class="mb-10 px-4 py-2 bg-gray-200 flex justify-between items-center">
+      <h1 class="text-orange-600 font-semibold text-2xl">Airnbn</h1>
+      <div class="flex gap-x-4 items-center">
+        <a href="">Registrarse</a>
+        <a href="" class="bg-orange-600 text-white  px-1 py-2 rounded-sm hover:bg-orange-500"
+          >Iniciar seccion</a
+        >
+      </div>
+    </nav>
+
+    <main class="w-full flex items-center justify-center mt-10">
+
+        <div class="flex items-center gap-x-4 w-10/12">
+
+            <p id="miParrafo" class="font-semibold  text-xl textoStyle w-1/2"></p>
+ <!--Carrusel-->
+ <div class="carousel mt-6 w-full">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="../resources/beach.jpg" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+        <img src="../resources/hotel2.jpg" alt="Imagen 2">
+      </div>
+      <div class="carousel-item">
+        <img src="../resources/hotel3.jpg" alt="Imagen 3">
+      </div>
+    </div>
+        </div>
+    
+
+     
+    </main>
+
+    <script src="./carrusel.js"></script>
+    <script>
+        const textoCompleto = "Descubre un mundo de posibilidades con nuestra exclusiva colección de residencias para alquilar, donde el lujo se encuentra con la comodidad. Sumérgete en un oasis de elegancia y modernidad, donde cada detalle ha sido cuidadosamente diseñado para ofrecer una experiencia de alojamiento inigualable";
+      
+        let index = 0;
+        const parrafo = document.getElementById("miParrafo");
+      
+        function escribirTexto() {
+          if (index < textoCompleto.length) {
+            parrafo.innerHTML += textoCompleto.charAt(index);
+            index++;
+            setTimeout(escribirTexto, 50); // Ajusta la velocidad de escritura según tus preferencias
+          }
+        }
+      
+        // Inicia la función de escritura cuando la página se carga
+        window.onload = function() {
+          escribirTexto();
+        };
+      </script>
+  </body>
+</html>

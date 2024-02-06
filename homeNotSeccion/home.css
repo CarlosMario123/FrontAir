@@ -1,0 +1,35 @@
+ @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Quicksand:wght@600&family=Roboto+Condensed&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+
+
+.textoStyle{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
